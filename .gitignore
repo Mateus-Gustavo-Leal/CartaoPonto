@@ -8,3 +8,6 @@ obj/
 
 .env
 .env.*
+ponto.db
+ponto.db-shm
+ponto.db-wal
