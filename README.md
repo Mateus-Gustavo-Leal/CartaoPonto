@@ -1,8 +1,8 @@
 # CartaoPonto
 
 Cartão Ponto
+Projeto de sistema de cartão ponto desenvolvido com ASP.NET Core, C# e SQLite.
 
-Projeto de um sistema de cartão ponto desenvolvido para praticar C# e desenvolvimento web.
 
 A ideia é criar um sistema onde o usuário consiga fazer login e registrar seus horários de entrada, intervalo e saída.
 
