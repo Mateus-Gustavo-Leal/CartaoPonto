@@ -1,0 +1,61 @@
+@{
+    ViewData["Title"] = "Gestão de Ponto";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestão de Ponto - Cartão Ponto</title>
+    <link rel="stylesheet" href="~/css/gestao.css" />
+</head>
+<body>
+
+    <div class="container-gestao">
+
+        <!-- Painel principal: relógio, status e botão de bater ponto -->
+        <div class="painel">
+
+            <div class="usuario-info">
+                <span>Olá, @User.Identity?.Name</span>
+                <a asp-controller="Account" asp-action="Logout">Sair</a>
+            </div>
+
+            <div class="relogio-atual" id="relogioAtual">--:--:--</div>
+
+            <div id="statusBadge" class="status-badge status-trabalhando">Trabalhando</div>
+
+            <div class="tempo-principal" id="horasTrabalhadas">00:00:00</div>
+            <div class="tempo-legenda">horas trabalhadas hoje</div>
+
+            <div class="restante">
+                Faltam <strong id="tempoRestante">08:00:00</strong> para completar a jornada de 8h
+            </div>
+
+            <!-- Motivo opcional para o próximo registro de ponto -->
+            <div class="campo-motivo">
+                <label for="motivoInput">Motivo (opcional)</label>
+                <input type="text" id="motivoInput" placeholder="Ex: almoço, saída médica, home office..." />
+            </div>
+
+            <button id="btnPonto" class="btn-ponto trabalhando">Bater Ponto (Ir para Pausa)</button>
+
+        </div>
+
+        <!-- Painel lateral: histórico de registros do dia -->
+        <div class="painel-registros">
+            <h4>Registros de hoje</h4>
+            <p class="aviso-storage">Salvo neste navegador (localStorage)</p>
+
+            <div id="listaRegistros" class="lista-registros">
+                <!-- Preenchido dinamicamente pelo JavaScript -->
+            </div>
+        </div>
+
+    </div>
+
+    <script src="~/js/gestao.js"></script>
+</body>
+</html>

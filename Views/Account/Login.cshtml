@@ -1,0 +1,50 @@
+    @model Cartao_Ponto.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - Cartão Ponto</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/login.css" /> <!-- CSS próprio da tela de login -->
+</head>
+<body>
+
+    <div class="login-card">
+
+        <div class="login-icon">T</div>
+
+        <h4 class="login-title">Cartão Ponto</h4>
+        <p class="login-subtitle">Entre com suas credenciais para continuar</p>
+
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger py-2 text-center small" role="alert"></div>
+
+        <form asp-controller="Account" asp-action="Login" method="post" novalidate>
+            @Html.AntiForgeryToken()
+
+            <div class="mb-3">
+                <label asp-for="Usuario" class="form-label">Usuário</label>
+                <input asp-for="Usuario" class="form-control" placeholder="Digite seu usuário" autofocus />
+                <span asp-validation-for="Usuario" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="Senha" class="form-label">Senha</label>
+                <input asp-for="Senha" class="form-control" placeholder="Digite sua senha" />
+                <span asp-validation-for="Senha" class="text-danger small"></span>
+            </div>
+
+            <button type="submit" class="btn btn-login">Entrar</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

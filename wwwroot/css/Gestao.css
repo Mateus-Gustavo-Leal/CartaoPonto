@@ -1,0 +1,305 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #16213e, #0f3460);
+}
+
+.container-gestao {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.painel {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px 40px;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.usuario-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.usuario-info span {
+    color: #16213e;
+    font-weight: bold;
+}
+
+.usuario-info a {
+    color: #0f3460;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.usuario-info a:hover {
+    text-decoration: underline;
+}
+
+.relogio-atual {
+    margin-bottom: 8px;
+    color: #777;
+    font-size: 14px;
+}
+
+.status-badge {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 5px 12px;
+   
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.status-trabalhando {
+    background: #f1f1f1;
+    color: #444;
+}
+
+.status-pausa {
+    background: #f1f1f1;
+    color: #777;
+}
+
+.btn-ponto {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-ponto.trabalhando {
+    background: #d9534f;
+}
+    
+.btn-ponto.trabalhando:hover {
+    background: #c9302c;
+}
+
+.btn-ponto.pausa {
+    background: #5cb85c;
+}
+
+.btn-ponto.pausa:hover {
+    background: #4cae4c;
+}
+
+.tempo-principal {
+    margin-bottom: 5px;
+    color: #16213e;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.tempo-legenda {
+    margin-bottom: 20px;
+    color: #888;
+    font-size: 13px;
+}
+
+.restante {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 15px;
+}
+
+.restante strong {
+    color: #0f3460;
+}
+
+.campo-motivo {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.campo-motivo label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 12px;
+}
+
+.campo-motivo input {
+    width: 100%;
+    padding: 9px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.btn-ponto {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-ponto.trabalhando {
+    background: #c9302c;
+}
+
+.btn-ponto.trabalhando:hover {
+    background: #a52521;
+}
+
+.btn-ponto.pausa {
+    background: #1f9d55;
+}
+
+.btn-ponto.pausa:hover {
+    background: #187b42;
+}
+
+.painel-registros {
+    width: 100%;
+    max-width: 340px;
+    padding: 25px;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.painel-registros h4 {
+    margin: 0 0 5px;
+    color: #16213e;
+}
+
+.aviso-storage {
+    margin: 0 0 15px;
+    color: #aaa;
+    font-size: 11px;
+}
+
+.lista-registros {
+    max-height: 360px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.registro-item {
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    background: #f7f7fa;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+.registro-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.registro-tipo {
+    width: fit-content;
+    padding: 2px 7px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.tipo-entrada {
+    
+    color: #2456c9;
+}
+
+.tipo-pausa {
+    
+    color: #c98a12;
+}
+
+.tipo-retorno {
+   
+    color: #1f9d55;
+}
+
+.registro-hora {
+    color: #16213e;
+    font-weight: bold;
+}
+
+.registro-motivo {
+    color: #777;
+    font-size: 12px;
+}
+
+.btn-ajustar,
+.btn-salvar,
+.btn-cancelar {
+    padding: 4px 6px;
+    border: none;
+    background: none;
+    color: #0f3460;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-ajustar:hover,
+.btn-salvar:hover {
+    text-decoration: underline;
+}
+
+.btn-cancelar {
+    color: #999;
+}
+
+.registro-editando {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.registro-info-edicao {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-hora-edicao,
+.input-motivo-edicao {
+    padding: 7px 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.botoes-edicao {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
